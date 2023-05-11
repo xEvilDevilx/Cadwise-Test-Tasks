@@ -1,0 +1,34 @@
+﻿<Window x:Class="TextHandler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextHandler"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="122*"/>
+        </Grid.RowDefinitions>
+        
+        <Label Content="Text Handler" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="320" Height="61" FontSize="34" FontWeight="SemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        
+        <TextBlock HorizontalAlignment="Center" Margin="-588,110,0,0" TextWrapping="Wrap" Text="Input text files directory" VerticalAlignment="Top" Width="140" UseLayoutRounding="False" ScrollViewer.CanContentScroll="False"/>
+        <TextBox x:Name="_inputFilesDir" HorizontalAlignment="Center" Margin="56,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="496" IsReadOnly="True" UseLayoutRounding="False" ScrollViewer.CanContentScroll="False"/>
+        <Button x:Name="_inputFilesBrowseBtn" Content="Browse" Click="BtnInputFilesBrowseClick" HorizontalAlignment="Center" Margin="655,108,0,0" VerticalAlignment="Top" Width="72" UseLayoutRounding="False" ScrollViewer.CanContentScroll="False"/>
+        <TextBlock HorizontalAlignment="Center" Margin="-588,145,0,0" TextWrapping="Wrap" Text="Output text files directory" VerticalAlignment="Top" Width="140" UseLayoutRounding="False" ScrollViewer.CanContentScroll="False"/>
+        <TextBox x:Name="_outputFilesDir" HorizontalAlignment="Center" Margin="56,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="496" IsReadOnly="True" UseLayoutRounding="False" ScrollViewer.CanContentScroll="False"/>
+        <Button x:Name="_outputFilesBrowseBtn" Content="Browse" Click="BtnOutputFilesBrowseClick" HorizontalAlignment="Center" Margin="655,143,0,0" VerticalAlignment="Top" Width="72" UseLayoutRounding="False" ScrollViewer.CanContentScroll="False"/>
+        <TextBlock HorizontalAlignment="Center" Margin="-588,182,0,0" TextWrapping="Wrap" Text="Minimal word length" VerticalAlignment="Top" Width="140" Grid.RowSpan="2" UseLayoutRounding="False" ScrollViewer.CanContentScroll="False"/>
+        <TextBox x:Name="_minTextLength" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Center" Margin="-382,182,0,0" TextWrapping="NoWrap" Text="0" VerticalAlignment="Top" Width="58" Grid.RowSpan="2" UseLayoutRounding="False" ScrollViewer.CanContentScroll="False"/>
+        <CheckBox x:Name="_useRemovePunctuations" Content="Remove punctuations" HorizontalAlignment="Center" Margin="-568,218,0,0" VerticalAlignment="Top" FlowDirection="RightToLeft" Width="160" HorizontalContentAlignment="Right" Grid.RowSpan="2" UseLayoutRounding="False" ScrollViewer.CanContentScroll="False"/>
+        
+        <Popup x:Name="_popup" StaysOpen="False" Placement="Mouse" MaxWidth="400" AllowsTransparency="False" Grid.RowSpan="2">
+            <TextBlock x:Name="_popupText" TextWrapping="NoWrap" Width="180" Background="LightPink" Opacity="0.8">
+            </TextBlock>
+        </Popup>
+
+        <Button x:Name="_startBtn" Content="Start" Click="BtnStartClick" Margin="0,280,0,0" FontSize="22" VerticalContentAlignment="Center" Grid.RowSpan="2" HorizontalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Width="164"/>
+    </Grid>
+</Window>

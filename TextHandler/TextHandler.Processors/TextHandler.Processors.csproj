@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TextHandler.Common\TextHandler.Common.csproj" />
+    <ProjectReference Include="..\TextHandler.Interfaces\TextHandler.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

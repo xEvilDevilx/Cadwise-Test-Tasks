@@ -1,0 +1,57 @@
+﻿<Window x:Class="ATM.CashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATM"
+        mc:Ignorable="d"
+        Title="CashWindow" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="140" Margin="-660,0,0,0" VerticalAlignment="Top" Width="120">
+            <TextBox x:Name="_denomination10Value" MinWidth="80" TextWrapping="Wrap" PreviewTextInput="NumberValidationTextBox" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" HorizontalContentAlignment="Center"/>
+        </Border>
+        <Label Content="Denomination 10" HorizontalAlignment="Center" Margin="-660,0,0,0" VerticalAlignment="Top" Foreground="#FFDCAA00" FontWeight="Bold"/>
+        <Label Content="Bank notes count:" HorizontalAlignment="Center" Margin="-660,34,0,0" VerticalAlignment="Top" Foreground="#FF00A5DC"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="140" Margin="-400,0,0,0" VerticalAlignment="Top" Width="120">
+            <TextBox x:Name="_denomination50Value" MinWidth="80" TextWrapping="Wrap" PreviewTextInput="NumberValidationTextBox" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" HorizontalContentAlignment="Center"/>
+        </Border>
+        <Label Content="Denomination 50" HorizontalAlignment="Center" Margin="-400,0,0,0" VerticalAlignment="Top" Foreground="#FFDCAA00" FontWeight="Bold"/>
+        <Label Content="Bank notes count:" HorizontalAlignment="Center" Margin="-400,34,0,0" VerticalAlignment="Top" Foreground="#FF00A5DC"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="140" Margin="-140,0,0,0" VerticalAlignment="Top" Width="120">
+            <TextBox x:Name="_denomination100Value" MinWidth="80" TextWrapping="Wrap" PreviewTextInput="NumberValidationTextBox" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" HorizontalContentAlignment="Center"/>
+        </Border>
+        <Label Content="Denomination 100" HorizontalAlignment="Center" Margin="-140,0,0,0" VerticalAlignment="Top" Foreground="#FFDCAA00" FontWeight="Bold"/>
+        <Label Content="Bank notes count:" HorizontalAlignment="Center" Margin="-140,34,0,0" VerticalAlignment="Top" Foreground="#FF00A5DC"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="140" Margin="120,0,0,0" VerticalAlignment="Top" Width="120">
+            <TextBox x:Name="_denomination500Value" MinWidth="80" TextWrapping="Wrap" PreviewTextInput="NumberValidationTextBox" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" HorizontalContentAlignment="Center"/>
+        </Border>
+        <Label Content="Denomination 500" HorizontalAlignment="Center" Margin="120,0,0,0" VerticalAlignment="Top" Foreground="#FFDCAA00" FontWeight="Bold"/>
+        <Label Content="Bank notes count:" HorizontalAlignment="Center" Margin="120,34,0,0" VerticalAlignment="Top" Foreground="#FF00A5DC"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="140" Margin="380,0,0,0" VerticalAlignment="Top" Width="120">
+            <TextBox x:Name="_denomination1000Value" MinWidth="80" TextWrapping="Wrap" PreviewTextInput="NumberValidationTextBox" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" HorizontalContentAlignment="Center"/>
+        </Border>
+        <Label Content="Denomination 1000" HorizontalAlignment="Center" Margin="380,0,0,0" VerticalAlignment="Top" Foreground="#FFDCAA00" FontWeight="Bold"/>
+        <Label Content="Bank notes count:" HorizontalAlignment="Center" Margin="380,34,0,0" VerticalAlignment="Top" Foreground="#FF00A5DC"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="140" Margin="640,0,0,0" VerticalAlignment="Top" Width="120">
+            <TextBox x:Name="_denomination5000Value" MinWidth="80" TextWrapping="Wrap" PreviewTextInput="NumberValidationTextBox" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" HorizontalContentAlignment="Center"/>
+        </Border>
+        <Label Content="Denomination 5000" HorizontalAlignment="Center" Margin="640,0,0,0" VerticalAlignment="Top" Foreground="#FFDCAA00" FontWeight="Bold"/>
+        <Label Content="Bank notes count:" HorizontalAlignment="Center" Margin="640,34,0,0" VerticalAlignment="Top" Foreground="#FF00A5DC"/>
+
+        <Label x:Name="_needToFillBankNotesCountNoti" Content="Please enter a bank notes count!" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF00BE00"/>
+
+        <WrapPanel x:Name="_okBtnPanel" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,180,0,0">
+            <Button IsCancel="True" MinWidth="100">OK</Button>
+        </WrapPanel>
+
+        <WrapPanel x:Name="_okCancelBtnPanel" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,180,0,0" Visibility="Hidden">
+            <Button IsDefault="True" Click="OkBtn" MinWidth="100" Margin="0,0,60,0">OK</Button>
+            <Button IsCancel="True" MinWidth="100" Margin="60,0,0,0">Отмена</Button>
+        </WrapPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ATM.Common\ATM.Common.csproj" />
+    <ProjectReference Include="..\ATM.Data\ATM.Data.csproj" />
+    <ProjectReference Include="..\ATM.Interfaces\ATM.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
